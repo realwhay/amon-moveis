@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Amon Móveis</title>
+    <style>
+        /* Reutilizando a base de estilo para manter a identidade */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+
+        header { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 0.8rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 40px; margin-right: 10px; }
+        .logo-text { font-size: 1.4rem; font-weight: bold; display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-text span:first-child { color: #d35400; }
+        .logo-text span:last-child { font-size: 0.8rem; font-weight: normal; color: #bbb; }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #d35400; }
+
+        /* Conteúdo da Página Sobre */
+        .banner-topo {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .banner-topo h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        .container-sobre {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .secao-texto {
+            margin-bottom: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .secao-texto h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-left: 5px solid #d35400;
+            padding-left: 15px;
+        }
+        .secao-texto p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .valor-item {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-bottom: 3px solid #d35400;
+        }
+        .valor-item h4 { color: #2c3e50; margin-bottom: 10px; }
+
+        .cta-final {
+            text-align: center;
+            margin: 60px 0;
+        }
+        .btn-contato {
+            background: #d35400;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-contato:hover { background: #e67e22; }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 60px; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .header-left { margin-bottom: 10px; }
+            nav ul li { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="amon.jpg" alt="Logo Amon Móveis">
+            <div class="logo-text">
+                <span>Amon Móveis</span>
+                <span>Móveis Sob Medida</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-topo">
+        <h1>Nossa História</h1>
+        <p>Conheça a essência da Amon Móveis</p>
+    </section>
+
+    <main class="container-sobre">
+        <section class="secao-texto">
+            <h2>Quem Somos</h2>
+            <p>
+                A <strong>Amon Móveis</strong> nasceu da paixão pelo trabalho com a madeira e do desejo de transformar casas em lares verdadeiramente personalizados. Com anos de experiência no mercado de marcenaria sob medida, nos consolidamos como referência em qualidade, pontualidade e design inovador.
+            </p>
+            <p>
+                Acreditamos que cada móvel é único e deve refletir a personalidade de quem o utiliza. Por isso, utilizamos as melhores matérias-primas e ferragens do mercado, garantindo que o seu projeto tenha não apenas beleza, mas a durabilidade que você merece.
+            </p>
+        </section>
+
+        <section class="secao-texto">
+            <h2>Nosso Diferencial</h2>
+            <p>Diferente da produção industrial em massa, na Amon Móveis cada detalhe é pensado de forma artesanal, mas com o suporte tecnológico necessário para um acabamento perfeito. Nosso atendimento é próximo, ouvindo cada necessidade do cliente desde o primeiro desenho até a instalação final.</p>
+            
+            <div class="valores-grid">
+                <div class="valor-item">
+                    <h4>Qualidade</h4>
+                    <p>Acabamento impecável e materiais de primeira linha.</p>
+                </div>
+                <div class="valor-item">
+                    <h4>Compromisso</h4>
+                    <p>Entrega no prazo combinado com total transparência.</p>
+                </div>
+                <div class="valor-item">
+                    <h4>Exclusividade</h4>
+                    <p>Projetos pensados exatamente para o seu espaço.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-final">
+            <p style="margin-bottom: 20px; font-size: 1.2rem;">Quer transformar o seu projeto em realidade?</p>
+            <a href="contato.html" class="btn-contato">Solicite um Orçamento Gratuito</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amon Móveis - Transformando madeira em sonhos.</p>
+    </footer>
+
+</body>
+</html>

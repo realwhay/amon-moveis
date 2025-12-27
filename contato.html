@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Amon Móveis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Estilo Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Header */
+        header { 
+            background: #2c3e50; color: white; padding: 0.8rem 5%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 40px; margin-right: 10px; }
+        .logo-text { font-size: 1.4rem; font-weight: bold; display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-text span:first-child { color: #d35400; }
+        .logo-text span:last-child { font-size: 0.8rem; font-weight: normal; color: #bbb; }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #d35400; }
+
+        /* Banner */
+        .banner-contato { background: #34495e; color: white; text-align: center; padding: 50px 20px; }
+
+        /* Layout de Contato */
+        .container-contato {
+            max-width: 1100px; margin: 50px auto; padding: 0 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+        }
+
+        /* Lado Esquerdo: Informações com Ícones */
+        .info-contato h2 { color: #2c3e50; margin-bottom: 20px; }
+        .info-contato p { margin-bottom: 30px; font-size: 1.1rem; }
+        
+        .metodo-contato { display: flex; align-items: center; margin-bottom: 25px; }
+        
+        .icon-box { 
+            width: 55px; height: 55px; background: #d35400; color: white; 
+            border-radius: 50%; display: flex; justify-content: center; 
+            align-items: center; margin-right: 20px; font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .metodo-contato:hover .icon-box {
+            transform: scale(1.1);
+            background: #e67e22;
+        }
+        
+        .metodo-texto h4 { color: #2c3e50; font-size: 1.1rem; margin-bottom: 2px; }
+        .metodo-texto p { margin-bottom: 0; font-size: 1rem; color: #666; }
+
+        /* Formulário */
+        .formulario-contato {
+            background: white; padding: 30px; border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #2c3e50; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;
+            font-size: 1rem; outline: none;
+        }
+        .form-group input:focus, .form-group textarea:focus { border-color: #d35400; }
+        
+        .btn-enviar {
+            width: 100%; background: #d35400; color: white; padding: 15px;
+            border: none; border-radius: 4px; font-size: 1.1rem; font-weight: bold;
+            cursor: pointer; transition: 0.3s;
+        }
+        .btn-enviar:hover { background: #e67e22; }
+
+        /* Botão WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+            background-color: #25d366; color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100; display: flex; justify-content: center; align-items: center;
+        }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            .container-contato { grid-template-columns: 1fr; }
+            header { flex-direction: column; text-align: center; }
+            nav ul li { margin: 10px 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5549999915106" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <div class="header-left">
+            <img src="amon.jpg" alt="Logo Amon Móveis">
+            <div class="logo-text">
+                <span>Amon Móveis</span>
+                <span>Móveis Sob Medida</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-contato">
+        <h1>Fale Conosco</h1>
+        <p>A equipe Amon Móveis está pronta para te atender.</p>
+    </section>
+
+    <main class="container-contato">
+        <div class="info-contato">
+            <h2>Canais de Atendimento</h2>
+            <p>Escolha o canal de sua preferência e peça seu orçamento.</p>
+
+            <div class="metodo-contato">
+                <div class="icon-box">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="metodo-texto">
+                    <h4>WhatsApp</h4>
+                    <p>(49) 99991-5106</p>
+                </div>
+            </div>
+
+            <div class="metodo-contato">
+                <div class="icon-box">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <div class="metodo-texto">
+                    <h4>E-mail</h4>
+                    <p>amonmoveis@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="metodo-contato">
+                <div class="icon-box">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="metodo-texto">
+                    <h4>Nossa Marcenaria</h4>
+                    <p>Rua Vicente Fernandes, 500 - Videira/SC</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="formulario-contato">
+    <form id="meu-formulario" action="https://formspree.io/f/meeqgqkb" method="POST">
+        
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+            <label for="telefone">WhatsApp / Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(49) 99991-5106" required>
+        </div>
+        <div class="form-group">
+            <label for="mensagem">Conte-nos sobre seu projeto</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex: Gostaria de um orçamento para uma cozinha planejada..." required></textarea>
+        </div>
+        
+        <button type="submit" id="botao-enviar" class="btn-enviar">Enviar Solicitação</button>
+        <p id="status-envio" style="margin-top: 10px; font-weight: bold; text-align: center; display: none;"></p>
+    </form>
+</div>
+
+<script>
+    var form = document.getElementById("meu-formulario");
+    
+    async function handleSubmit(event) {
+      event.preventDefault(); // Impede o envio padrão que abre a página do Formspree
+      var status = document.getElementById("status-envio");
+      var botao = document.getElementById("botao-enviar");
+      var data = new FormData(event.target);
+      
+      status.style.display = "block";
+      status.innerText = "Enviando...";
+      botao.disabled = true;
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // SE DEU CERTO, ELE VAI PARA A SUA PÁGINA DE OBRIGADO
+          window.location.href = "obrigado.html";
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerText = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.innerText = "Oops! Ocorreu um problema ao enviar o formulário.";
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerText = "Oops! Ocorreu um problema de conexão.";
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amon Móveis - Móveis Planejados de Alto Padrão.</p>
+    </footer>
+
+</body>

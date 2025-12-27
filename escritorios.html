@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritórios Planejados | Amon Móveis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilo Base - Identidade Amon Móveis */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Header */
+        header { 
+            background: #2c3e50; color: white; padding: 0.8rem 5%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 45px; margin-right: 12px; }
+        .logo-text { font-size: 1.4rem; font-weight: bold; display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-text span:first-child { color: #d35400; }
+        .logo-text span:last-child { font-size: 0.8rem; font-weight: normal; color: #bbb; }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #d35400; }
+
+        /* Banner da Página */
+        .banner-escritorios { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat; 
+            color: white; text-align: center; padding: 80px 20px;
+        }
+        .banner-escritorios h1 { font-size: 3rem; margin-bottom: 10px; }
+
+        /* Conteúdo e Galeria */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .intro-texto { text-align: center; margin-bottom: 50px; }
+        .intro-texto h2 { color: #2c3e50; margin-bottom: 15px; }
+        .intro-texto p { font-size: 1.1rem; color: #666; max-width: 800px; margin: 0 auto; }
+
+        .galeria-escritorios { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px; 
+        }
+        .item-escritorio { 
+            background: white; border-radius: 8px; overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s;
+        }
+        .item-escritorio:hover { transform: translateY(-5px); }
+        .item-escritorio img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .item-info { padding: 20px; text-align: center; }
+        .item-info h3 { color: #2c3e50; margin-bottom: 10px; }
+
+        /* CTA Final */
+        .cta-escritorios { text-align: center; margin: 60px 0; padding: 40px; background: #fff; border-radius: 10px; }
+        .btn-orcamento { 
+            background: #d35400; color: white; padding: 15px 40px; 
+            border-radius: 5px; font-weight: bold; font-size: 1.2rem; display: inline-block; 
+            transition: 0.3s; margin-top: 20px;
+        }
+        .btn-orcamento:hover { background: #e67e22; }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; }
+
+        @media (max-width: 768px) {
+            .banner-escritorios h1 { font-size: 2rem; }
+            header { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="amon.jpg" alt="Amon Móveis">
+            <div class="logo-text">
+                <span>Amon Móveis</span>
+                <span>Móveis Sob Medida</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-escritorios">
+        <h1>Escritórios e Home Office</h1>
+        <p>Produtividade e conforto num ambiente pensado para você.</p>
+    </section>
+
+    <main class="container">
+        <div class="intro-texto">
+            <h2>Transforme a sua forma de trabalhar</h2>
+            <p>Seja para uma empresa ou para o seu Home Office, a Amon Móveis cria ambientes organizados, ergonómicos e inspiradores, garantindo que o seu espaço de trabalho reflita profissionalismo e sofisticação.</p>
+        </div>
+
+        <div class="galeria-escritorios">
+            <div class="item-escritorio">
+                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop" alt="Home Office Moderno">
+                <div class="item-info">
+                    <h3>Home Office Minimalista</h3>
+                    <p>Bancada ampla com gaveteiros organizadores e prateleiras aéreas.</p>
+                </div>
+            </div>
+
+            <div class="item-escritorio">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1401&auto=format&fit=crop" alt="Escritório Corporativo">
+                <div class="item-info">
+                    <h3>Ambiente Corporativo</h3>
+                    <p>Móveis funcionais para escritórios de alto fluxo, com foco na durabilidade.</p>
+                </div>
+            </div>
+
+            <div class="item-escritorio">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1470&auto=format&fit=crop" alt="Estação de Trabalho">
+                <div class="item-info">
+                    <h3>Estação de Estudo</h3>
+                    <p>Design compacto e inteligente para quartos ou espaços reduzidos.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-escritorios">
+            <h2>Quer um escritório que impulsione o seu trabalho?</h2>
+            <p>Solicite um projeto personalizado que une tecnologia e marcenaria artesanal.</p>
+            <a href="contato.html" class="btn-orcamento">Pedir Orçamento de Escritório</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amon Móveis - Realizando projetos em Videira/SC.</p>
+    </footer>
+
+</body>
+</html>

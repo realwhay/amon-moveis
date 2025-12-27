@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Amon Móveis</title>
+    <style>
+        /* Manutenção do estilo padrão do site */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Header (Igual às outras páginas) */
+        header { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 0.8rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 40px; margin-right: 10px; }
+        .logo-text { font-size: 1.4rem; font-weight: bold; display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-text span:first-child { color: #d35400; }
+        .logo-text span:last-child { font-size: 0.8rem; font-weight: normal; color: #bbb; }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #d35400; }
+
+        /* Banner da página */
+        .banner-portfolio {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .banner-portfolio h1 { font-size: 2.5rem; }
+        .banner-portfolio p { font-size: 1.1rem; margin-top: 10px; color: #ddd; }
+
+        /* Estilos da Galeria */
+        .galeria-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .grid-portfolio {
+            display: grid;
+            /* Cria colunas automáticas com largura mínima de 300px */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .projeto-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden; /* Garante que a imagem não saia do card */
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .projeto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .projeto-img-wrapper {
+            height: 250px; /* Altura fixa para todas as imagens ficarem alinhadas */
+            overflow: hidden;
+        }
+
+        .projeto-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+            transition: transform 0.5s ease;
+        }
+        
+        .projeto-card:hover .projeto-img-wrapper img {
+            transform: scale(1.05); /* Leve zoom ao passar o mouse */
+        }
+
+        .projeto-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .projeto-info h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .projeto-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* CTA Final */
+        .cta-portfolio {
+            text-align: center;
+            padding: 40px 20px;
+            background: #e9ecef;
+            margin-top: 50px;
+        }
+        .btn-orcamento {
+            display: inline-block;
+            background: #d35400;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn-orcamento:hover { background: #e67e22; }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 0; }
+        
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .header-left { margin-bottom: 10px; }
+            nav ul li { margin: 0 10px; }
+            .projeto-img-wrapper { height: 200px; } /* Imagens menores no celular */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="amon.jpg" alt="Logo Amon Móveis">
+            <div class="logo-text">
+                <span>Amon Móveis</span>
+                <span>Móveis Sob Medida</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-portfolio">
+        <h1>Nosso Portfólio</h1>
+        <p>Confira alguns dos sonhos que já ajudamos a realizar.</p>
+    </section>
+
+    <main class="galeria-container">
+        <div class="grid-portfolio">
+            
+            <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                    <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Foto+Cozinha" alt="Cozinha Planejada">
+                </div>
+                <div class="projeto-info">
+                    <h3>Cozinha Modern</h3>
+                    <p>Acabamento em laca e madeira natural.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                     <img src="https://via.placeholder.com/400x300/d35400/ffffff?text=Foto+Quarto" alt="Dormitório Casal">
+                </div>
+                <div class="projeto-info">
+                    <h3>Suíte Master</h3>
+                    <p>Cabeceira estofada e armários com portas de vidro.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                     <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Foto+Sala" alt="Home Theater">
+                </div>
+                <div class="projeto-info">
+                    <h3>Home Theater</h3>
+                    <p>Painel ripado com iluminação LED integrada.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                     <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Foto+Escritorio" alt="Escritório">
+                </div>
+                <div class="projeto-info">
+                    <h3>Home Office</h3>
+                    <p>Estação de trabalho ergonômica para dois.</p>
+                </div>
+            </div>
+
+             <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                     <img src="https://via.placeholder.com/400x300/d35400/ffffff?text=Foto+Area+Gourmet" alt="Área Gourmet">
+                </div>
+                <div class="projeto-info">
+                    <h3>Área Gourmet</h3>
+                    <p>Balcão funcional e armários resistentes.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <div class="projeto-img-wrapper">
+                     <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Foto+Banheiro" alt="Banheiro">
+                </div>
+                <div class="projeto-info">
+                    <h3>Banheiro Social</h3>
+                    <p>Gabinete suspenso com cuba esculpida.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="cta-portfolio">
+        <h2>Gostou do que viu?</h2>
+        <p>Vamos conversar sobre o seu projeto. O orçamento é sem compromisso!</p>
+        <a href="contato.html" class="btn-orcamento">Solicitar Meu Orçamento</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amon Móveis - Qualidade em cada detalhe.</p>
+    </footer>
+
+</body>
+</html>

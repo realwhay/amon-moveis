@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amon Móveis | Móveis Sob Medida</title>
+    <style>
+        /* Estilos Gerais */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Cabeçalho */
+        header { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 0.8rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .header-left img {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        .logo-text span:first-child {
+            color: #d35400; 
+        }
+        .logo-text span:last-child {
+            font-size: 0.8rem;
+            font-weight: normal;
+            color: #bbb;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+            padding: 5px 0;
+            transition: color 0.3s;
+            position: relative;
+        }
+        nav ul li a:hover {
+            color: #d35400;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #d35400;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('cozinha.jpg') center/cover no-repeat; 
+            height: 70vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: flex-start; 
+            color: white; 
+            text-align: left; 
+            padding: 0 5%; 
+            position: relative;
+        }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 15px; 
+            max-width: 700px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p { 
+            font-size: 1.3rem; 
+            margin-bottom: 30px; 
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button { 
+            background: #d35400; 
+            color: white; 
+            padding: 15px 35px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .cta-button:hover { 
+            background: #e67e22; 
+            transform: translateY(-2px);
+        }
+
+        /* Seção de Especialidades */
+        .especialidades { 
+            padding: 60px 5%; 
+            text-align: center; 
+            background-color: #ffffff;
+        }
+        .especialidades h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .especialidades h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #d35400;
+            border-radius: 2px;
+        }
+        .grid-especialidades { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 50px; 
+        }
+        .card-especialidade { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+            cursor: pointer; 
+        }
+        .card-especialidade:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .card-especialidade h3 { 
+            color: #2c3e50; 
+            margin-bottom: 15px; 
+            font-size: 1.6rem;
+        }
+        .card-especialidade p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Rodapé */
+        footer { 
+            background: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            margin-top: 60px; 
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem 5%;
+            }
+            .header-left {
+                margin-bottom: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 0 15px 10px;
+            }
+            .hero {
+                height: 60vh;
+                padding: 0 5%;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .especialidades h2 {
+                font-size: 2rem;
+            }
+            .grid-especialidades {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="amon.jpg" alt="Logo Amon Móveis">
+            <div class="logo-text">
+                <span>Amon Móveis</span>
+                <span>Móveis Sob Medida</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Orçamento</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Móveis Planejados com Excelência</h1>
+        <p>A Amon Móveis transforma seu ambiente com design exclusivo e durabilidade incomparável.</p>
+        <a href="contato.html" class="cta-button">Entrar em Contato</a>
+    </section>
+
+    <section class="especialidades">
+        <h2>Nossas Especialidades</h2>
+        <div class="grid-especialidades">
+            <a href="cozinhas.html" class="card-especialidade">
+                <h3>Cozinhas</h3>
+                <p>Planejamento inteligente e design funcional para o coração da sua casa.</p>
+            </a>
+            <a href="dormitorios.html" class="card-especialidade">
+                <h3>Dormitórios</h3>
+                <p>Conforto e organização sob medida para seu descanso e bem-estar.</p>
+            </a>
+            <a href="escritorios.html" class="card-especialidade">
+                <h3>Escritórios</h3>
+                <p>Ambientes produtivos com ergonomia, estilo e organização.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amon Móveis - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

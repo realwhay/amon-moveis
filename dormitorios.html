@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormitórios Planejados | Amon Móveis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilo Base - Identidade Amon Móveis */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Header */
+        header { 
+            background: #2c3e50; color: white; padding: 0.8rem 5%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 45px; margin-right: 12px; }
+        .logo-text { font-size: 1.4rem; font-weight: bold; display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-text span:first-child { color: #d35400; }
+        .logo-text span:last-child { font-size: 0.8rem; font-weight: normal; color: #bbb; }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #d35400; }
+
+        /* Banner da Página */
+        .banner-dormitorios { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat; 
+            color: white; text-align: center; padding: 80px 20px;
+        }
+        .banner-dormitorios h1 { font-size: 3rem; margin-bottom: 10px; }
+
+        /* Conteúdo e Galeria */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .intro-texto { text-align: center; margin-bottom: 50px; }
+        .intro-texto h2 { color: #2c3e50; margin-bottom: 15px; }
+        .intro-texto p { font-size: 1.1rem; color: #666; max-width: 800px; margin: 0 auto; }
+
+        .galeria-dormitorios { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px; 
+        }
+        .item-dormitorio { 
+            background: white; border-radius: 8px; overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s;
+        }
+        .item-dormitorio:hover { transform: translateY(-5px); }
+        .item-dormitorio img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .item-info { padding: 20px; text-align: center; }
+        .item-info h3 { color: #2c3e50; margin-bottom: 10px; }
+
+        /* CTA Final */
+        .cta-dormitorios { text-align: center; margin: 60px 0; padding: 40px; background: #fff; border-radius: 10px; }
+        .btn-orcamento { 
+            background: #d35400; color: white; padding: 15px 40px; 
+            border-radius: 5px; font-weight: bold; font-size: 1.2rem; display: inline-block; 
+            transition: 0.3s; margin-top: 20px;
+        }
+        .btn-orcamento:hover { background: #e67e22; }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; }
+
+        @media (max-width: 768px) {
+            .banner-dormitorios h1 { font-size: 2rem; }
+            header { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="amon.jpg" alt="Amon Móveis"> <div class="logo-text">
+                <span>Amon Móveis</span> <span>Móveis Sob Medida</span> </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li> <li><a href="sobre-nos.html">Sobre Nós</a></li> <li><a href="portfolio.html">Portfólio</a></li> <li><a href="contato.html">Contato</a></li> </ul>
+        </nav>
+    </header>
+
+    <section class="banner-dormitorios">
+        <h1>Dormitórios Planejados</h1>
+        <p>Conforto, organização e estilo para o seu descanso.</p>
+    </section>
+
+    <main class="container">
+        <div class="intro-texto">
+            <h2>O seu refúgio particular com design exclusivo</h2>
+            <p>Criamos soluções inteligentes para roupeiros, cabeceiras e closets que aliam ergonomia e sofisticação, transformando o seu quarto num espaço de puro bem-estar.</p>
+        </div>
+
+        <div class="galeria-dormitorios">
+            <div class="item-dormitorio">
+                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1439&auto=format&fit=crop" alt="Suíte Master Planejada">
+                <div class="item-info">
+                    <h3>Suíte Master</h3>
+                    <p>Roupeiro com portas de correr espelhadas e nichos iluminados.</p>
+                </div>
+            </div>
+
+            <div class="item-dormitorio">
+                <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1470&auto=format&fit=crop" alt="Quarto de Solteiro">
+                <div class="item-info">
+                    <h3>Dormitório de Solteiro</h3>
+                    <p>Estação de estudo integrada com armários aéreos.</p>
+                </div>
+            </div>
+
+            <div class="item-dormitorio">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1469&auto=format&fit=crop" alt="Closet Planejado">
+                <div class="item-info">
+                    <h3>Closet Exclusivo</h3>
+                    <p>Divisões internas personalizadas para máxima organização.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-dormitorios">
+            <h2>Precisa de mais espaço no seu quarto?</h2>
+            <p>Desenvolvemos projetos que aproveitam cada milímetro do seu ambiente.</p>
+            <a href="contato.html" class="btn-orcamento">Pedir Orçamento de Dormitório</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amon Móveis - Localizada em Videira/SC.</p> </footer>
+
+</body>
+</html>
